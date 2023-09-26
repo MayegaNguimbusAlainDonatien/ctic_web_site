@@ -1,0 +1,89 @@
+@import '../../../../shared/styles/variable';
+
+.mailModalScrollbar {
+  height: 460px;
+}
+
+.mailModalFooter {
+  padding: 16px 32px;
+  border-top: solid $border-width $border-color;
+  margin-bottom: 0;
+  border-radius: 0 0 $border-radius $border-radius;
+  text-align: right;
+
+  [dir='rtl'] & {
+    text-align: left;
+  }
+}
+
+.mailModalBtn {
+  padding: 8px 32px;
+}
+
+.mailModalContent {
+  flex: 1;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 32px;
+}
+
+.mailModalTextarea {
+  width: 100%;
+  font-weight: $font-weight-normal;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+
+  & :global(.ql-toolbar) {
+    border-radius: 4px 4px 0 0;
+  }
+
+  & :global(.ql-container) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.btnCC {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  font-weight: $font-weight-medium;
+}
+
+.mailInput {
+  [dir='rtl'] & {
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+  }
+}
+.btnBCC {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  font-weight: $font-weight-medium;
+
+  [dir='rtl'] & {
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.closeBtn {
+  button {
+    [dir='rtl'] & {
+      margin: -0.5rem auto -0.5rem 0 !important;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+@import '../../../../shared/styles/variable.scss';
+
+.welcomeCard {
+  overflow: hidden;
+}
+
+.welcomeCardContent {
+  margin-right: 8px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: calc(100% - 140px);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-right: 10px;
+    width: calc(100% - 170px);
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+}
+
+.welcomeCardHeader {
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 50px;
+  }
+
+  & h5 {
+    color: $text-color-secondary;
+    font-weight: $font-weight-normal;
+    margin-bottom: 2px;
+    font-size: $font-size-lg;
+  }
+
+  & h3 {
+    color: $text-color;
+    font-weight: $font-weight-medium;
+    font-size: 20px;
+    margin-bottom: 12px;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 24px;
+    }
+  }
+}
+
+.welcomeCardContainer {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.welcomeCardRow {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.welcomeCardCol {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 12px;
+}
+
+.imgAvatar {
+    background-color: rgba($primary, 0.1);
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  border-radius: $border-radius-circle;
+
+    @include media-breakpoint-up(md) {
+      font-size: 26px;
+      height: 60px;
+      width: 60px;
+      min-width: 60px;
+    }
+}
+
+.welcomeCardColContent {
+  position: relative;
+  font-size: $font-size-base;
+  color: $text-color-secondary;
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.specialTitle {
+  color: $text-color;
+  font-weight: $font-weight-medium;
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.welcomeImg {
+  margin-right: -10px;
+  margin-bottom: -20px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: -10px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    max-width: 150px;
+    min-width: 140px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: 180px;
+    min-width: 170px;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.imgWrapper{
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-left: 16px ;
+    margin-right: 0;
+  }
+}

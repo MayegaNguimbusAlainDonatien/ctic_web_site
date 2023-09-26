@@ -1,0 +1,170 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+.userMordenCard {
+  margin-bottom: 20px;
+  border-radius: $card-radius;
+  padding: 20px;
+}
+
+.userMordenThumb {
+  margin-bottom: 12px;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 0;
+    margin-right: 20px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+
+  & img {
+    border-radius: $border-radius-circle;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+
+    @include media-breakpoint-up(sm) {
+      width: 130px;
+      height: 130px;
+    }
+  }
+}
+
+.userMordenContent {
+  flex: 1 1;
+}
+
+.userMordenHeader {
+  margin-bottom: 12px;
+  color: $text-color-secondary;
+
+  & h3 {
+    margin-bottom: 8px;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $text-color;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.userMordenHeaderAction {
+  margin-left: -16px;
+  color: $text-color-secondary;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: -16px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-left: auto;
+    margin-right: -16px;
+
+    [dir='rtl'] & {
+      margin-left: -16px;
+      margin-right: auto;
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.userMordenHeaderActionItem {
+  font-size: 20px;
+}
+
+.userMordenPara {
+  color: $text-color-secondary;
+  font-size: $font-size-base;
+
+  @include media-breakpoint-up(lg) {
+    padding-right: 24px;
+
+    [dir='rtl'] & {
+      padding-right: 0;
+      padding-left: 24px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-right: 64px;
+
+    [dir='rtl'] & {
+      padding-right: 0;
+      padding-left: 64px;
+    }
+  }
+}
+
+.useMordenFooterChipView {
+  margin-left: -4px;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: -4px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: -8px;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: -8px;
+    }
+  }
+}
+
+.userMordenFooterChip {
+  background-color: darken($component-bg, 6.6);
+  padding: 6px 24px;
+  margin: 8px 4px 0;
+  border: 1px solid darken($component-bg, 38);
+  border-radius: 4px;
+  display: inline-block;
+
+  @include media-breakpoint-up(xxl) {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  &.dark {
+    background-color: $gray-700;
+  }
+}
+
+.userMordenFooterHireBtn {
+  margin-right: 20px;
+  margin-top: 8px;
+  padding: 9px 12px;
+  width: 96px;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+  height: 32px;
+  font-size: 14px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+}
+
+.userMordenFooterRemoveBtn {
+  background-color: $component-bg;
+  color: $text-color;
+  margin-top: 8px;
+  border: 1px solid $gray-500;
+  padding: 9px 12px;
+  width: 96px;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+  height: 32px;
+  font-size: 14px;
+}

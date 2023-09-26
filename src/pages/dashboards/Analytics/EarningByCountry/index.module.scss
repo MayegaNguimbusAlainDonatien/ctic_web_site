@@ -1,0 +1,45 @@
+@import '../../../../shared/styles/variable';
+
+.countryMapChart {
+  height: 224px;
+}
+
+.earningCountryFooterItem {
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-bottom: 8px;
+
+  & h3 {
+    font-size: 20px;
+    font-weight: $font-weight-medium;
+    margin-bottom: 4px;
+  }
+
+  & .dot {
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: $border-radius-circle;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  & p {
+    color: $text-color-secondary;
+    font-size: $font-size-base;
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+}
+
+.appSelectBox {
+  width: auto;
+}

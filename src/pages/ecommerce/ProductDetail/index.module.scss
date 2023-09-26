@@ -1,0 +1,75 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+.productDetailHeader {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+}
+
+.productDetailHeaderInfo {
+  flex: 1;
+
+  & h3 {
+    color: $text-color;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-lg;
+    margin-bottom: 4px;
+  }
+}
+
+// .product-detail-header-content {
+//   & .ant-rate {
+//     font-size: $font-size-base;
+//     margin-bottom: 6px;
+//   }
+
+//   & > span {
+//     margin-bottom: 6px;
+//   }
+// }
+
+.productReviewText {
+  margin-left: 8px;
+  margin-right: 16px;
+  color: $text-color-secondary;
+
+  [dir='rtl'] & {
+    margin-left: 16px;
+    margin-right: 8px;
+  }
+}
+
+.productMbText {
+  margin-left: 8px;
+  color: $text-color-secondary;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
+
+.productDetailSocial {
+  @include media-breakpoint-down(sm) {
+    margin-top: 10px;
+  }
+
+  & .react-share__ShareButton {
+    margin-right: 0 !important;
+    margin-left: 12px !important;
+
+    [dir='rtl'] & {
+      margin-right: 12px !important;
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.headerIcon {
+  margin: 0 10px;
+}

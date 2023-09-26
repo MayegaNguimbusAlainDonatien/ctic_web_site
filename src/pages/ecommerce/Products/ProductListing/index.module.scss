@@ -1,0 +1,9 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.productListMainContent {
+  flex: 1;
+  padding: 8px;
+  width: 100%;
+  background-color: $gray-200;
+}

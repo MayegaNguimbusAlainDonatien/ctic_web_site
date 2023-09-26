@@ -1,0 +1,105 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.productHeader {
+  background-color: $component-bg;
+}
+
+.productHeaderLeft {
+  flex: 1;
+  padding-right: 12px;
+
+  [dir='rtl'] & {
+    padding-right: 0;
+    padding-left: 12px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: calc(100% - 262px);
+  }
+
+  & h3 {
+    font-weight: $font-weight-bold;
+    margin-right: 12px;
+    margin-bottom: 0;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+}
+
+.productHeaderSearch {
+  max-width: 120px;
+
+  @include media-breakpoint-up(md) {
+    margin-right: 16px;
+    max-width: 165px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+
+  & .appInput {
+    padding: 8px 14px;
+    height: 36px;
+  }
+
+  & .ant-input-search-button {
+    height: 36px;
+    width: 36px;
+    box-shadow: none;
+
+    & .anticon svg {
+      display: block;
+    }
+  }
+}
+
+.productHeaderBtn {
+  border: 0 none;
+  color: $text-color;
+  box-shadow: none;
+  border-radius: $border-radius-circle;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  font-size: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: fade($black, 10);
+    color: $text-color;
+  }
+
+  &.active {
+    color: $primary;
+
+    &:hover,
+    &:focus {
+      background-color: fade($black, 10);
+      color: $primary;
+    }
+  }
+}
+
+.searchInput {
+  [dir='rtl'] & {
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+  }
+}
+.searchBtn {
+  [dir='rtl'] & {
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../../../shared/styles/variable';
+
+.listWrapper {
+  margin: 0 -20px;
+}
+
+.recentNewsMoreBtn {
+  margin: -1px -20px;
+  border-top: $border-width solid $border-color;
+  text-align: center;
+  padding-top: 11px;
+  cursor: pointer;
+}
+
+.recentNewsLink {
+  color: $primary;
+}
+
+.recentNewsItem {
+  padding: 8px 20px;
+}
+
+.recentNewsAvatar {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+}
+
+.recentNewsItemContent {
+  margin-left: 14px;
+  flex: 1;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+
+  & h4 {
+    margin-bottom: 2px;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-base;
+  }
+
+  & p {
+    margin-bottom: 0;
+    color: $text-color-secondary;
+  }
+}
+
+.recentNewsItemLink {
+  color: $primary;
+  cursor: pointer;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}

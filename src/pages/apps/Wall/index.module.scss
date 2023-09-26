@@ -1,0 +1,32 @@
+@import '../../../shared/styles/variable';
+
+.wallLeftSidebar {
+  @media screen and (min-width: 768px) and (max-width: 1020px) {
+    flex-basis: 40%;
+    max-width: 40%;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.wallMainContent {
+  @media screen and (min-width: 768px) and (max-width: 1020px) {
+    flex-basis: 60%;
+    max-width: 60%;
+  }
+}
+
+.wallRightSidebar {
+  @media screen and (max-width: 1020px) {
+    display: none;
+  }
+}
+
+.wallScrollbar {
+  & .ps--active-x > .ps__rail-x,
+  & .ps--active-y > .ps__rail-y {
+    z-index: 1;
+  }
+}

@@ -1,0 +1,119 @@
+@import '../../../../../shared/styles/variable';
+
+.mailListItemMobile {
+  font-weight: $font-weight-normal;
+  border-bottom: 1px solid $border-color;
+  padding: 8px 24px;
+  cursor: pointer;
+
+  &:global(.mailRead) {
+    background-color: rgba($black, 0.03);
+  }
+}
+
+.mailListAvatarMobileView {
+  margin-right: 14px;
+  margin-top: 3px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  background-color: $gray-400;
+  color: $white;
+  border-radius: $border-radius-circle;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: 'tnum', 'tnum';
+  white-space: nowrap;
+  vertical-align: middle;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.mailListAvatarMobile {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: $gray-400;
+  font-size: 18px;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: 'tnum', 'tnum';
+  color: $white;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: $border-radius-circle;
+}
+
+.mailListContentMobile {
+  width: calc(100% - 50px);
+
+  & .mail-list-time {
+    font-size: $font-size-sm;
+    width: auto;
+  }
+}
+
+.mailListMainContentMobile {
+  width: calc(100% - 60px);
+
+  [dir='rtl'] & {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+}
+
+.mailListActionMobile {
+  min-width: 60px;
+  padding-top: 3px;
+  transition: all 0.4s ease 0s;
+}
+
+.mailListTimeMobile {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $text-color-secondary;
+}
+
+.mailListTitleMobile {
+  font-weight: $font-weight-medium;
+  color: $text-color;
+
+  @include media-breakpoint-up(sm) {
+    width: 120px;
+  }
+
+  :global(.mailRead) & {
+    font-weight: $font-weight-normal;
+    color: $text-color;
+  }
+}
+
+.mailListSubTitleMobile {
+  font-weight: $font-weight-normal;
+  color: $text-color;
+  margin-bottom: 0;
+  white-space: nowrap;
+
+  :global(.mailRead) & {
+    font-weight: $font-weight-normal;
+    color: $text-color;
+  }
+}
+
+.mailDescriptionMobile {
+  color: $text-color-secondary;
+  margin-bottom: 0;
+}
+
+.mailListDate {
+  white-space: pre;
+
+  [dir='rtl'] & {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+}

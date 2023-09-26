@@ -1,0 +1,70 @@
+@import '../../../../shared/styles/variable';
+
+.popularProductScrollbar {
+  height: 280px;
+}
+
+.popularList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+  }
+}
+
+.productCell {
+  padding: 8px 20px;
+  border-bottom: 0 none !important;
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    width: 50%;
+  }
+}
+
+.popularImg {
+  height: 70px;
+  width: 70px;
+  border-radius: 4px;
+  margin-right: 16px;
+
+  [dir='rtl'] & {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}
+
+.productCellContent {
+  flex: 1;
+
+  & h3 {
+    color: $primary;
+    font-weight: $font-weight-medium;
+    margin-bottom: 2px;
+    font-size: $font-size-base;
+  }
+
+  & p {
+    font-size: $font-size-base;
+    color: $text-color-secondary;
+    margin-bottom: 4px;
+  }
+
+  & .price {
+    font-weight: $font-weight-medium;
+    color: $text-color;
+
+    & span {
+      margin-left: 12px;
+      margin-bottom: 4px;
+      color: $text-color-secondary;
+
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: 12px;
+      }
+    }
+  }
+}

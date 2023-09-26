@@ -1,0 +1,38 @@
+@import '../../../../shared/styles/variable';
+
+.appointmentContentItem {
+
+  & h3 {
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    color: $white;
+  }
+
+  & p {
+    margin-bottom: 8px;
+  }
+
+  & h5 {
+    font-size: $font-size-sm;
+    margin-bottom: 12px;
+    font-weight: $font-weight-bold;
+    text-align: right;
+    color: $white;
+
+    [dir=rtl] & {
+      text-align: left;
+    }
+  }
+}
+
+.appointmentArrowIcon {
+  font-size: 18px;
+  margin-right: 2px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 2px;
+  }
+}
+
+

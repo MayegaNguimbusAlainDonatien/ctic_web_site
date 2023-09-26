@@ -1,0 +1,73 @@
+@import '../../../../shared/styles/variable';
+
+.topSellingCell {
+  padding: 8px 20px;
+  border: 0 none;
+}
+
+.topSellingCellImg {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 16px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+}
+
+.topSellingCellContent {
+  & h3 {
+    color: $primary;
+    display: inline-block;
+    font-weight: $font-weight-medium;
+    margin-bottom: 2px;
+    font-size: $font-size-base;
+  }
+
+  & p {
+    font-size: $font-size-sm;
+    color: $text-color-secondary;
+    margin-bottom: 4px;
+  }
+}
+
+.topSellingPrice {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+}
+
+.topSellingCellAction {
+  margin-left: auto;
+
+  [dir='rtl'] & {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+.topSellingCellActionInfo {
+  padding: 8px 0 8px 8px;
+  margin-left: 8px;
+
+  [dir='rtl'] & {
+    margin-right: 8px;
+    margin-left: 0;
+  }
+
+  & p {
+    color: $text-color-secondary;
+    margin-bottom: 0;
+  }
+}
+
+.topSellingCellActionIcon {
+  color: $text-color-disabled;
+}
+
+.footerMore {
+  color: $secondary;
+  text-decoration: none;
+}

@@ -1,0 +1,392 @@
+@import '../../../../../../shared/styles/variable';
+@import '../../../../../../shared/styles/mixin';
+
+.scrumBoardAddCardFormScroll {
+  max-height: calc(100% - 71px);
+}
+
+.addCardDrawer {
+  width: 320px !important;
+
+  @include media-breakpoint-up(sm) {
+    width: 400px !important;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 500px !important;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 700px !important;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 900px !important;
+  }
+
+  & :global(.offcanvas-body) {
+    padding: 0;
+  }
+}
+
+.scrumBoardAddCardFormContent {
+  flex: 1;
+  padding: 16px 24px;
+}
+
+.scrumBoardAddCardFormFooter {
+  padding: 16px 24px;
+  border-top: solid $border-width $border-color;
+  border-radius: 0 0 $border-radius $border-radius;
+  text-align: right;
+
+  [dir='rtl'] & {
+    text-align: left;
+  }
+
+  & button {
+    width: 100px;
+
+    &:not(:first-child) {
+      margin-left: 10px;
+
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.scrumBoardAttachmentTitle {
+  margin-bottom: 12px;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 20px;
+  }
+}
+
+.scrumBoardAttachment {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.scrumBoardAttachmentItems {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 12px;
+  width: 50%;
+
+  @include media-breakpoint-up(md) {
+    width: 33.33%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 25%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 20%;
+  }
+}
+
+.scrumBoardAttachmentCard {
+  border-radius: $border-radius;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: rgba($text-color, 0.1);
+
+    & .scrumBoardAttachmentItemsAction {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.scrumBoardAttachmentImg {
+  height: 132px;
+  object-fit: cover;
+}
+
+.scrumBoardAttachmentItemsAction {
+  padding: 10px;
+  content: '';
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: rgba($text-color, 0.6);
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+
+  & :global(.btn) {
+    background-color: rgba($body-bg, 0.5);
+    color: $text-color;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      background-color: rgba($body-bg, 0.6);
+      color: $text-color;
+    }
+
+    &:not(:first-child) {
+      margin-left: 10px;
+
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.scrumBoardAttachmentContent {
+  padding: 8px 12px;
+}
+
+.scrumBoardAttachmentFileName {
+  font-weight: $font-weight-light;
+  color: $primary;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.scrumBoardAttachmentFileTime {
+  font-size: $font-size-sm;
+
+  & span {
+    margin-right: 4px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 4px;
+    }
+  }
+}
+
+.scrum-board-card-check-list {
+  margin-bottom: 32px;
+}
+
+.scrumBoardCardCheckListHeader {
+  & h4 {
+    font-size: $font-size-lg;
+    margin-bottom: 0;
+  }
+
+  & button {
+    margin-left: auto;
+    padding: 6px 16px;
+    font-weight: $font-weight-light;
+    text-transform: capitalize;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+}
+
+.scrumBoardCardCheckListItem {
+  & :global(.btn) {
+    margin-left: 12px;
+    margin-right: -12px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    [dir='rtl'] & {
+      margin-left: -12px;
+      margin-right: 12px;
+    }
+  }
+
+  &:hover {
+    & :global(.btn) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.scrumBoardCardCheckListItemCheckBox {
+  margin-right: 8px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.scrumBoardCardComment {
+  margin-bottom: 20px;
+}
+
+.scrumBoardCardCommentItem {
+  display: flex;
+
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+}
+
+.scrumBoardCardCommentItemPrevious {
+  &:not(:first-child) {
+    margin-top: 1px;
+  }
+
+  & .scrumBoardCardCommentItemUserDate,
+  & .scrumBoardCardCommentItemUserAvatar {
+    display: none;
+  }
+
+  & .scrumBoardCardCommentItemUserContent {
+    margin-left: 54px;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 54px;
+    }
+  }
+}
+
+.scrumBoardCardCommentArea {
+  box-shadow: none;
+  border-radius: 0 10px 10px 0;
+  padding: 6px 12px;
+  background-color: $body-bg;
+  border: solid $border-width $border-color;
+  font-size: $font-size-base;
+
+  [dir='rtl'] & {
+    border-radius: 10px 0 0 10px;
+  }
+
+  :global(.last-scrum-board-message) & {
+    border-radius: 0 10px 10px 10px;
+
+    [dir='rtl'] & {
+      border-radius: 10px 0 10px 10px;
+    }
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.scrumBoardCardCommentView {
+  border-top: solid $border-width $border-color;
+  padding: 20px 24px;
+  flex: 1;
+}
+
+.scrumBoardCardCommentScroll {
+  max-height: 200px;
+  margin-bottom: 20px;
+}
+
+.scrumBoardCardCommentItemUserAvatar {
+  border-radius: $border-radius-circle;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-color: $orange-500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-lg;
+}
+
+.scrumBoardCardCommentItemUserContent {
+  margin-left: 14px;
+  flex: 1;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+}
+
+.scrumBoardCardCommentTitle {
+  font-size: $font-size-lg;
+}
+
+.scrum-board-card-comment-item-user-name {
+  color: $primary;
+  font-weight: $font-weight-light;
+  display: flex;
+}
+
+.scrumBoardCardCommentItemUserDate {
+  color: $text-color-disabled;
+  font-size: $font-size-sm;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.drawerHeaderWrapper {
+  padding: 6px 24px;
+  border-bottom: 1px solid $border-color;
+}
+
+.scrumBoardCardHeader {
+  padding-right: 8px;
+
+  [dir='rtl'] & {
+    padding-right: 0;
+    padding-left: 8px;
+  }
+
+  & h3 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+  }
+}
+
+.scrum-board-card-header-action {
+  display: flex;
+  align-items: center;
+}
+
+.scrumBoardCardCommentFooter {
+
+  & .btnCircle {
+    padding: 2px;
+    margin-left: 12px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
+}
+
+.scrumBoardCardCommentTextArea {
+  padding: 10px 14px;
+  max-height: 50px;
+  min-height: 40px;
+}
+
+.multipleSelect {
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: $border-radius-circle;
+  }
+}
+
+.multipleSelectName {
+  margin-left: 10px;
+  font-size: 11px;
+}

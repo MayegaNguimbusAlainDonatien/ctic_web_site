@@ -1,0 +1,81 @@
+@import '../../../../shared/styles/variable';
+
+.myProfileInfo {
+  color: $text-color-secondary;
+}
+
+.myProfileAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  @include media-breakpoint-up(md) {
+    width: 70px;
+    height: 70px;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 26px;
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.myProfileTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+}
+
+.myProfileFooter {
+  width: 100%;
+  padding: 12px;
+  background-color: #e7f4fc;
+  color: $black;
+  border-radius: $card-radius;
+  @include media-breakpoint-up(xxl) {
+    padding: 20px;
+  }
+}
+
+.myProfileFooterItem {
+  padding-left: 4px;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  overflow: hidden;
+
+  &:not(:first-child) {
+    border-left: solid $border-width $border-color;
+
+    [dir='rtl'] & {
+      border-left: 0 none;
+      border-right: solid $border-width $border-color;
+    }
+  }
+
+  & h4 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    color: lighten($black, 28.5);
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  & .textTruncate {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.myProfileThumb {
+  margin-bottom: 12px;
+}
+

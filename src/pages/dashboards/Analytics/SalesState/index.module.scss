@@ -1,0 +1,92 @@
+@import '../../../../shared/styles/variable';
+
+.salesStateCard {
+  position: relative;
+}
+
+.salesStateSubTitle {
+  text-align: center;
+  color: $text-color-secondary;
+  margin-top: -12px;
+  margin-bottom: 8px;
+
+  @include media-breakpoint-up(sm) {
+    text-align: left;
+
+    [dir=rtl] & {
+      text-align: right;
+    }
+  }
+}
+
+.salesStateContent {
+
+  & > div {
+    width: 100%;
+  }
+}
+
+.salesStateItem {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 24px;
+
+    [dir=rtl] & {
+      padding-left: 0;
+      padding-right: 24px;
+    }
+  }
+
+  & .imgAvatar {
+    height: 50px;
+    width: 50px;
+    min-width: 50px;
+    margin-right: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      height: 60px;
+      width: 60px;
+      min-width: 60px;
+    }
+  }
+}
+
+.salesStateItemContent {
+  font-size: $font-size-base;
+  color: $text-color-secondary;
+  width: calc(100% - 66px);
+
+  @include media-breakpoint-up(xxl) {
+    width: calc(100% - 76px);
+  }
+
+  & h3 {
+    display: inline-block;
+    font-weight: $font-weight-medium;
+    margin-bottom: 2px;
+    font-size: 18px;
+    color: $text-color;
+  }
+
+  & p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.appSelectBox {
+  width: auto;
+}

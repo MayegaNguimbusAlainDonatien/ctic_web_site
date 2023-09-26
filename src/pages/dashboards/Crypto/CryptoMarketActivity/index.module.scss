@@ -1,0 +1,21 @@
+@import '../../../../shared/styles/variable';
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: $border-radius-circle;
+  margin-right: 12px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.dotText{
+  margin-right: 12px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../../shared/styles/variable';
+
+.orderSummaryItem {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  color: $text-color-secondary;
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  & span {
+    color: $text-color;
+  }
+}

@@ -1,0 +1,113 @@
+@import '../../../../../shared/styles/variable';
+
+.todoListMobileItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $text-color-secondary;
+  padding: 8px 24px;
+  border-bottom: solid $border-width $border-color;
+
+  &.checked {
+    background-color: rgba($primary, 0.1);
+    font-weight: $font-weight-light;
+  }
+}
+
+.todoListMobileMainContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 70px);
+  overflow: hidden;
+}
+
+.todoListMobileContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 50px);
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.todoListMobileView {
+  margin-right: 14px;
+  margin-top: 3px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+
+  &.checked {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+    background-color: $primary;
+    color: $white;
+    border-radius: $border-radius-circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.todoListMobileAvatar {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+}
+
+.todoListMobileAction {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+.todoListMobileTitle {
+  position: relative;
+  color: $text-color;
+  display: flex;
+
+  & span {
+    margin-bottom: 2px;
+  }
+}
+
+.todoListMobilePriority {
+  margin-left: 6px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 6px;
+  }
+}
+
+.todoListStarMobile {
+  position: relative;
+}
+
+.todoListMobileDate {
+  font-size: $font-size-sm;
+  color: $text-color-secondary;
+}
+
+.badgePriority {
+  font-size: $font-size-sm;
+  padding: 2px 12px 3px;
+  border-radius: $border-radius-30;
+}

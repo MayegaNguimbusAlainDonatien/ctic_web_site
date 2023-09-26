@@ -1,0 +1,41 @@
+@import '../../../../shared/styles/variable';
+
+.appCardBody {
+  margin: -20px;
+}
+
+.birthdayHeader {
+  padding: 20px;
+  color: $white;
+  background-color: $blue-600;
+
+  @include media-breakpoint-up(xxl) {
+    padding: 28px;
+  }
+
+  & h3 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $white;
+    margin-bottom: 0;
+  }
+}
+
+.birthdayContent {
+  padding: 20px;
+  flex: 1;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.birthday-thumb {
+  margin-bottom: 16px;
+}

@@ -1,0 +1,144 @@
+@import '../../../../shared/styles/variable';
+
+.mailSidebarHeader {
+  padding: 16px;
+
+  @include media-breakpoint-up(md) {
+    padding: 20px;
+  }
+
+  & button {
+    border-radius: $border-radius-30;
+    padding: 8px 28px;
+    height: 42.5px;
+    font-size: $font-size-base;
+
+    & svg {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+  }
+}
+
+.mailSidebarScrollbar {
+  height: calc(100% - 83px);
+}
+
+.mailSidebarContent {
+  @include media-breakpoint-up(md) {
+    padding-bottom: 20px;
+  }
+}
+
+.mailSidebarList {
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 20px;
+  }
+}
+
+.mailSidebarTitle {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  margin-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-top: 20px;
+  }
+}
+
+.mailConnectionListItem {
+  padding: 4px 16px;
+  cursor: pointer;
+  border: 0 none !important;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.mail-connection-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 14px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.mailConnectionTitle {
+  font-weight: $font-weight-medium;
+}
+
+.mailLabelItem {
+  position: relative;
+  font-size: 15px;
+  font-weight: $font-weight-medium;
+
+  & a {
+    display: flex;
+    align-items: center;
+    color: $text-color;
+    padding: 8.5px 16px;
+    margin-right: 20px;
+    border-radius: 0 $border-radius-30 $border-radius-30 0;
+    text-decoration: none;
+
+    @include media-breakpoint-up(md) {
+      padding: 8.5px 20px;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $primary;
+      background-color: rgba($primary, 0.1);
+    }
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 20px;
+      border-radius: $border-radius-30 0 0 $border-radius-30;
+    }
+  }
+
+  & .mailDots {
+    margin-right: 16px;
+    height: 12px;
+    width: 12px;
+    border-radius: $border-radius-circle;
+    display: block;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-right: 20px;
+
+      [dir='rtl'] & {
+        margin-right: 0;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.avatar{
+  margin-right: 16px;
+
+  [dir='rtl'] & {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,192 @@
+@import '../../../../shared/styles/variable';
+
+.reactPlayerView {
+  position: relative;
+  margin: -20px -20px 0;
+}
+
+.videoPromo {
+  padding-top: 20px;
+}
+
+.videoPromoHeader {
+  flex-direction: column;
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.videoPromoHeaderContent {
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  & h3 {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+  }
+
+  & p {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: $text-color-secondary;
+    margin-bottom: 0;
+
+    & span:not(:first-child) {
+      margin-left: 8px;
+
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: 8px;
+      }
+    }
+
+    & .textPrimary {
+      color: $primary;
+    }
+  }
+}
+
+.borderRightBefore {
+  padding-right: 6px;
+
+  [dir='rtl'] & {
+    padding-right: 0;
+    padding-left: 6px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 1px;
+    height: 10px;
+    background-color: #bdbdbd;
+
+    [dir='rtl'] & {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+.videoPromoHeaderIcon {
+  height: 40px;
+  width: 40px;
+  border: solid $border-width lighten($black, 90);
+  color: lighten($text-color, 10);
+  border-radius: 5px;
+  font-size: 20px;
+
+  &.cloud {
+    margin-left: 8px;
+    background-color: lighten($black, 90);
+    color: lighten($black, 28.5);
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}
+
+.tabs {
+  position: relative;
+}
+
+.tab {
+  font-size: 14px !important;
+  text-transform: capitalize;
+  padding: 8px 0 12px !important;
+  min-width: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
+  color: $text-color !important;
+  border: none !important;
+
+  &:active,
+  &:focus {
+    color: $primary !important;
+    border: none !important;
+    border-bottom: 2px solid $primary !important;
+    text-shadow: 0 0 0.25px currentColor;
+  }
+  &:hover {
+    border: none;
+  }
+}
+
+.videoTabsContent {
+  padding: 16px 16px 8px;
+  margin-top: 20px;
+  border: $border-width solid $border-color;
+  border-radius: $card-radius;
+  color: $text-color-secondary;
+
+  & h4 {
+    color: $text-color;
+    font-size: $font-size-base;
+    margin-bottom: 8px;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.videoTabsAction {
+  flex-direction: column;
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.videoTabsActionLeft {
+  @include media-breakpoint-up(sm) {
+    margin-right: auto;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  .btnOutline {
+    color: $primary;
+    border-color: $primary;
+    background-color: $component-bg;
+  }
+
+  & button {
+    text-transform: uppercase;
+    padding: 2.5px 7px;
+  }
+
+  & button + button {
+    margin-left: 8px;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}
+
+.videoTabsActionRight {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  & .textSecondary {
+    color: #f04f47;
+    margin-left: 8px;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}

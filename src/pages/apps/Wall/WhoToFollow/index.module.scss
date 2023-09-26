@@ -1,0 +1,88 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.viewAll {
+  white-space: nowrap;
+}
+
+.whoFollowLink {
+  color: $primary;
+}
+
+.listWrapper {
+  margin: 0 -20px;
+}
+
+.whoFollowMoreBtn {
+  margin: -1px -20px;
+  border-top: $border-width solid $border-color;
+  text-align: center;
+  padding-top: 11px;
+  cursor: pointer;
+}
+
+.followItem {
+  padding: 8px 20px;
+}
+
+.followItemInfo {
+  flex: 1;
+  margin-left: 14px;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+}
+
+.followItemContent {
+  flex: 1;
+  margin-bottom: 6px;
+  margin-right: 10px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  & p {
+    margin-bottom: 0;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.followAvatar {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  margin-bottom: 6px;
+}
+
+.followItemIcon {
+  font-size: 14px;
+  margin-left: 6px;
+  color: $green;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 6px;
+  }
+}
+
+.followItemBtn {
+  text-transform: capitalize;
+  background-color: transparent;
+  color: $primary;
+  border-color: lighten($primary, 48);
+  height: 30px;
+  padding: 2px 16px;
+  border-radius: $border-radius-30;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $primary;
+    border-color: lighten($primary, 50);
+  }
+}

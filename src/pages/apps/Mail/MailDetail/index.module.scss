@@ -1,0 +1,246 @@
+@import '../../../../shared/styles/variable';
+
+.mailDetailBodyContent {
+  color: $text-color-secondary;
+}
+
+.mailDetailMessageContent {
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 10px;
+  }
+}
+
+.mailDetailBodyHeader {
+  cursor: pointer;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 12px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & h3 {
+    margin-bottom: 2px;
+    color: $primary;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-base;
+    margin-right: 8px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+  }
+}
+
+.mailDetailUser {
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 250px);
+  }
+}
+
+.mailDetailUserContent {
+  width: 80%;
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 55px);
+  }
+}
+
+.mailDetailUserDescription {
+  color: $text-color-secondary;
+
+  & p {
+    margin-bottom: 0;
+    display: inline;
+
+    &:not(:first-child) {
+      margin-left: 4px;
+
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+.mailDetailAvatar {
+  margin-right: 14px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ccc;
+  border-radius: 50%;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.mailDetailBreakAll {
+  word-break: break-all;
+  font-size: $font-size-sm;
+}
+
+.mailDetailBodyHeaderAction {
+  margin-top: 12px;
+  font-size: $font-size-sm;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media-breakpoint-up(md) {
+    margin-left: auto;
+    margin-top: 0;
+    justify-content: flex-end;
+    width: 250px;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+}
+
+.mailDetailDescription {
+  margin-bottom: 20px;
+  color: $text-color-secondary;
+  font-size: $font-size-base;
+
+  & p {
+    margin-bottom: 12px;
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.mailDetailSubjectHeaderAction {
+  & :global(.btn) {
+    margin: 0 2px;
+  }
+
+  @include media-breakpoint-up(md) {
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
+}
+
+.mailDetailForm {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  padding: 20px;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+}
+
+.mailDetailTextarea {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+
+  & :global(.ql-toolbar) {
+    border-radius: 4px 4px 0 0;
+  }
+
+  & :global(.ql-container) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.mailDetailBtn {
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: transparent;
+  color: $primary;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($primary, 0.1);
+    color: $primary;
+  }
+}
+
+.mailDescriptionName {
+  width: 80px;
+  color: $text-color-disabled;
+  text-align: right;
+  padding-right: 15px;
+
+  [dir='rtl'] & {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 15px;
+  }
+}
+
+.mailDetailArrow {
+  margin-left: -10px;
+  margin-right: 10px;
+
+  [dir='rtl'] & {
+    margin-left: 10px;
+    margin-right: -10px;
+  }
+}
+.dropdownToggleBtn {
+  color: inherit;
+  text-align: left;
+  font-size: $font-size-base;
+
+  [dir='rtl'] & {
+    text-align: right;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+.btnCC {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  font-weight: $font-weight-medium;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.mailDetailHeader {
+  position: relative;
+  margin-left: auto;
+
+  [dir='rtl'] & {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  & :global(.btn) {
+    margin: 0 2px;
+  }
+}

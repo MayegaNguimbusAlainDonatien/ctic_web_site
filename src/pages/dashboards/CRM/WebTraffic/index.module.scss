@@ -1,0 +1,21 @@
+@import '../../../../shared/styles/variable';
+
+.webTrafficCard {
+  margin-bottom: 32px;
+}
+
+.webTrafficItem {
+  position: relative;
+  font-size: $font-size-base;
+  color: $text-color-secondary;
+
+  & h4 {
+    margin-bottom: 8px;
+    font-weight: $font-weight-medium;
+    font-size: 18px;
+    @include media-breakpoint-up(xxl) {
+      font-size: 20px;
+    }
+  }
+}
+

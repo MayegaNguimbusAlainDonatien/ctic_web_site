@@ -1,0 +1,133 @@
+@import '../../../../shared/styles/variable';
+
+.videoCallCard {
+  position: relative;
+  overflow: hidden;
+
+  & :global(.card-img-top)  {
+    height: 140px;
+    object-fit: cover;
+  }
+
+  & :global(.card-body)  {
+    padding-top: 0;
+  }
+}
+
+.videoCall {
+  & h5 {
+    margin-bottom: 4px;
+    font-size: $font-size-base;
+  }
+
+  & p {
+    margin-bottom: 20px;
+    color: $text-color;
+  }
+}
+
+.videoCallAvatarView {
+  margin-bottom: 12px;
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 16px;
+  }
+}
+
+.videoCallAvatar {
+  width: 28px;
+  height: 28px;
+  border: solid 2px $white;
+  margin-right: -4px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: -4px;
+  }
+}
+
+.videoCallAvatarCount {
+  border: 2px solid $white;
+  width: 28px;
+  height: 28px;
+  background-color: $success;
+  color: $white;
+  border-radius: $border-radius-circle;
+  margin-right: -4px;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: -4px;
+  }
+}
+
+.videoCallBtnView {
+  margin-left: -8px;
+  margin-right: -8px;
+
+  & button {
+    margin: 0 8px 8px;
+    text-transform: capitalize;
+  }
+}
+
+.videoCallBtn {
+  background-color: lighten($primary, 48);
+  color: $primary;
+  border: 0 none;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($primary, 50);
+    color: $primary;
+  }
+}
+
+.videoCallUserInfo {
+  margin-bottom: 20px;
+  color: $text-color-secondary;
+
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 30px;
+  }
+
+  & h3 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-medium;
+    margin-bottom: 4px;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.avatar {
+  border: solid 5px $body-bg;
+  margin-bottom: 10px;
+  width: 84px;
+  height: 84px;
+  margin-top: -42px;
+}
+
+.videoCallUserStatus {
+  right: 2px;
+  bottom: 12px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background-color: $primary;
+  color: $white;
+  border-radius: $border-radius-circle;
+  border: solid 3px $white;
+
+  & .svg {
+    font-size: 14px;
+  }
+
+  [dir='rtl'] & {
+    right: auto;
+    left: 2px;
+  }
+}

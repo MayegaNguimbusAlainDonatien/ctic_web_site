@@ -1,0 +1,46 @@
+@import '../../../../shared/styles/variable';
+
+.notificationScrollBar {
+  height: 386px;
+}
+
+.avatar{
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}
+
+.notificationCell {
+  padding: 8px 20px;
+  border-bottom: 1px solid $border-color;
+  
+  & h4 {
+    color: $text-color;
+    margin-bottom: 2px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+  }
+
+  & p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: $font-size-base;
+    color: $text-color-secondary;
+    margin-bottom: 0;
+
+    & span {
+      display: block;
+      margin-right: 8px;
+      color: $primary;
+
+      [dir='rtl'] & {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+  }
+}

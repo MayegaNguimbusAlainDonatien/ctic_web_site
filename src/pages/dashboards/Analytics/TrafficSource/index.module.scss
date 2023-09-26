@@ -1,0 +1,69 @@
+@import '../../../../shared/styles/variable';
+
+.trafficAccordionItem {
+  background-color: $gray-100;
+  border-bottom: 0 none;
+}
+
+.trafficCollapseHeader {
+  position: relative;
+
+  & button {
+    padding: 12px 8px;
+    box-shadow: none;
+    color: $text-color;
+
+    &:global(:not(.collapsed)) {
+      color: $text-color;
+      background-color: $gray-100;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.trafficCollapseHeaderInner {
+  margin-bottom: 5px;
+
+  & h3 {
+    margin-bottom: 0;
+    font-size: $font-size-base;
+  }
+
+  & span {
+    color: $text-color-secondary;
+  }
+}
+
+.accordionBody {
+  padding: 4px 8px 8px;
+  border-top: solid $border-width $border-color;
+}
+
+.trafficCollapseContent {
+  color: $text-color-secondary;
+}
+
+.trafficCollapseData {
+  font-weight: $font-weight-light;
+  margin-right: 8px;
+  color: $text-color;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.trafficProgressBar {
+  width: 100%;
+  height: 10px;
+}

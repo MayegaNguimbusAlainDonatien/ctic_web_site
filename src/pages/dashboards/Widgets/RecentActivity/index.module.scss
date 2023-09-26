@@ -1,0 +1,13 @@
+@import '../../../../shared/styles/variable';
+
+.appCard {
+  position: relative;
+}
+
+.recentActivityScrollbar {
+  height: 295px;
+
+  @media screen and (min-width: 1600px) {
+    height: 342px;
+  }
+}

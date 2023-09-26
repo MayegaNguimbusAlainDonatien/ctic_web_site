@@ -1,0 +1,70 @@
+@import '../../../../shared/styles/variable';
+
+.wallAboutItem {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &:first-child {
+    align-items: flex-start;
+  }
+
+  &:hover .wallAboutBtn {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover a,
+  &:focus a {
+    color: $primary;
+  }
+
+  & a {
+    text-decoration: none;
+    word-break: break-all;
+    color: $text-color;
+  }
+
+  & svg {
+    display: block;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.wallAboutItemIcon {
+  margin-right: 14px;
+  font-size: $font-size-lg;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+
+  & svg {
+    display: block;
+  }
+}
+
+.wallAboutBtnView {
+  margin-left: auto;
+  margin-right: -8px;
+  margin-top: -8px;
+
+  [dir='rtl'] & {
+    margin-left: -8px;
+    margin-right: auto;
+  }
+}
+
+.wallAboutBtn {
+  color: $primary;
+  opacity: 0;
+  visibility: hidden;
+
+  & svg {
+    font-size: 20px;
+  }
+}

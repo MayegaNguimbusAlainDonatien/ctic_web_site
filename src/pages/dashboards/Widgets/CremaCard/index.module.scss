@@ -1,0 +1,80 @@
+@import '../../../../shared/styles/variable';
+
+.cremaCardHeader {
+  margin-bottom: 16px;
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 24px;
+  }
+}
+
+.cremaUserInfo {
+  padding-right: 8px;
+  width: calc(100% - 25px);
+
+  [dir='rtl'] & {
+    padding-right: 0;
+    padding-left: 8px;
+  }
+}
+
+.cremaLogo {
+  width: 40px;
+  margin-right: 12px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: 14px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 14px;
+    }
+  }
+
+  & img {
+    width: 100%;
+  }
+}
+
+.cremaUserInfoContent {
+  font-size: $font-size-base;
+  width: calc(100% - 56px);
+
+  & p {
+    color: $white;
+    margin-bottom: 0;
+  }
+}
+
+.cremaTitle {
+  color: $white;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+
+.cremaSocialLink {
+  margin-left: auto;
+  color: $white;
+  font-size: 20px;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.cremaPara {
+  color: $white;
+  margin-bottom: 4px;
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 16px;
+  }
+}

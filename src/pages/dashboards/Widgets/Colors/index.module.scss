@@ -1,0 +1,26 @@
+@import '../../../../shared/styles/variable';
+
+.colorsScrollbar {
+  height: 345px;
+
+  @include media-breakpoint-up(xxl) {
+    height: 300px;
+  }
+}
+
+.colorItem {
+  padding: 12px 20px;
+
+  & span {
+    font-weight: $font-weight-medium;
+  }
+}
+
+.colorCheckBox {
+  margin-right: 16px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+}

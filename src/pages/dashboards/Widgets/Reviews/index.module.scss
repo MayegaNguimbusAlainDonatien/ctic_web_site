@@ -1,0 +1,36 @@
+@import '../../../../shared/styles/variable';
+
+.reviewScrollbar {
+  height: 345px;
+
+  @include media-breakpoint-up(xxl) {
+    height: 300px;
+  }
+}
+
+.reviewItem {
+  border-bottom: 0 none !important;
+  font-size: $font-size-base;
+  padding: 8px 20px;
+
+  & p {
+    color: $text-color-secondary;
+    margin-bottom: 4px;
+  }
+}
+
+.reviewItemBy {
+  font-weight: $font-weight-medium;
+  color: $primary;
+}
+
+.reviewTime {
+  margin-left: auto;
+  color: $text-color-secondary;
+  font-weight: $font-weight-medium;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}

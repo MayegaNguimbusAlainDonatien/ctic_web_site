@@ -1,0 +1,13 @@
+@import '../../../../../shared/styles/variable.scss';
+
+.appLogo {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+
+  & img {
+    height: 36px;
+  }
+}
+

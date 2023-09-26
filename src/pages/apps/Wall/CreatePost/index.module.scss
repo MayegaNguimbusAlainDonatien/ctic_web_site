@@ -1,0 +1,121 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.createPostMainContent {
+  margin-left: 14px;
+  flex: 1;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+}
+
+.createPostInput {
+  font-size: $font-size-lg;
+  border-radius: $border-radius-30;
+  padding: 1px 5px 1px 14px;
+  overflow: hidden;
+  border-right: none;
+
+  [dir='rtl'] & {
+    border-left: none;
+    border-right: 1px solid $border-color;
+    border-top-right-radius: $border-radius-30 !important;
+    border-bottom-right-radius: $border-radius-30 !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @media screen and (max-width: 479px) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    border-radius: $card-radius;
+
+    & .ant-input-suffix {
+      margin-left: -8px;
+
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: -8px;
+      }
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.createPostImg {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.inputGroupText {
+  background-color: transparent;
+  border-left: none;
+
+  [dir='rtl'] & {
+    &:last-child {
+      border-right: none;
+      border-left: 1px solid $border-color;
+      border-top-left-radius: $border-radius-30 !important;
+      border-bottom-left-radius: $border-radius-30 !important;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &:not(:last-child) {
+    border-right: none;
+  }
+  &:last-child {
+    border-radius: $border-radius-circle;
+  }
+}
+
+.createPostActionBtn {
+  border: 0 none;
+  color: $text-color-secondary;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 5px;
+  border-radius: $border-radius-circle;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($black, 0.1);
+    color: $text-color;
+  }
+
+  &.active {
+    color: $primary;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($black, 0.1);
+      color: $primary;
+    }
+  }
+
+  & svg {
+    display: block;
+    font-size: 18px;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 20px;
+    }
+  }
+}

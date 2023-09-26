@@ -1,0 +1,53 @@
+@import '../../../../shared/styles/variable';
+
+.courseDetailThumb {
+  height: 60px;
+  width: 60px;
+  margin-right: 14px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+}
+
+.courseDetailHeaderInfo {
+  width: calc(100% - 76px);
+
+  & h3 {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-base;
+    margin-bottom: 2px;
+  }
+
+  & p {
+    color: $text-color-secondary;
+    font-weight: $font-weight-normal;
+  }
+}
+
+.courseDetailContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h4 {
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    margin-bottom: 12px;
+  }
+
+  & p {
+    margin-bottom: 4px;
+    color: $text-color-secondary;
+  }
+}

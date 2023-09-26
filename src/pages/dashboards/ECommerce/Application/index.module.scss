@@ -1,0 +1,31 @@
+@import '../../../../shared/styles/variable';
+
+.chartActionItem {
+  position: relative;
+
+  &:first-child {
+    margin-right: 24px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 24px;
+    }
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  & .dot {
+    height: 10px;
+    width: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+  }
+}
+

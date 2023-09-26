@@ -1,0 +1,85 @@
+@import '../../../../shared/styles/variable';
+
+.suggestTeamCard {
+  position: relative;
+
+  & :global(.card-footer) {
+    padding: 0;
+  }
+}
+
+.viewAll {
+  white-space: nowrap;
+}
+
+.bodyWrapper {
+  position: relative;
+}
+
+.suggestTeamBtn {
+  width: 100%;
+  height: 48px;
+  border-radius: 0;
+  border: 0 none;
+  background-color: transparent;
+  font-weight: $font-weight-medium;
+  color: $primary;
+  font-size: $font-size-base;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $primary;
+    box-shadow: none;
+  }
+
+  & svg {
+    margin-right: 10px;
+    font-size: 18px;
+    margin-bottom: 2px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+}
+
+.suggestTeamUser {
+  padding: 12px 20px 16px;
+
+  & img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.suggestTeamUserContent {
+  margin-left: 14px;
+  flex: 1;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+
+  & h4,
+  & p {
+    margin-bottom: 0;
+  }
+
+  p {
+    color: $text-color-secondary;
+  }
+}
+
+.suggestTeamThumb {
+  height: 180px;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

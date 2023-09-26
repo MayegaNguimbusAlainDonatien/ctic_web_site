@@ -1,0 +1,103 @@
+@import '../../../../../../shared/styles/variable';
+@import '../../../../../../shared/styles/mixin';
+
+.scrumBoardCardDetail {
+  cursor: pointer;
+}
+
+.scrumBoardCardDetailTitle {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  margin-right: 8px;
+  white-space: normal;
+  width: 250px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.scrumBoardCardDetailHeader {
+  margin-bottom: 12px;
+}
+
+.scrumBoardCardDetailHeaderAction {
+  & span {
+    font-weight: $font-weight-light;
+  }
+
+  & svg {
+    font-size: 18px;
+  }
+}
+
+.scrumBoardAttachIcon {
+  margin-left: 8px;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
+
+.scrumBoardCardDetailDate {
+  margin-left: 4px;
+  margin-right: auto;
+  color: $text-color-secondary;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 4px;
+  }
+}
+
+.scrumBoardCardDetailComment {
+  margin-left: 8px;
+  color: $text-color-secondary;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+
+  & span {
+    margin-right: 8px;
+    font-weight: $font-weight-light;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+  }
+}
+
+.scrumBoardLabelFlex {
+  margin: 16px -4px;
+}
+
+.scrumBoardLabel {
+  width: 32px;
+  height: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 20px;
+  display: inline-block;
+
+  @include media-breakpoint-up(sm) {
+    height: 6px;
+  }
+}
+
+.scrumBoardMemberAvatar {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+  border-radius: $border-radius-circle;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}

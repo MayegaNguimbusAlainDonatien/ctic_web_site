@@ -1,0 +1,11 @@
+.StatsCardGraph {
+  padding-left: -10px;
+  margin-right: -32px;
+  margin-bottom: -40px;
+  [dir='rtl'] & {
+    margin-left: -32px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: -10px;
+  }
+}

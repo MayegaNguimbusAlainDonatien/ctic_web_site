@@ -1,0 +1,13 @@
+@import '../../../shared/styles/variable';
+
+.acaNotificationRoot {
+  @include media-breakpoint-up(lg) {
+    order: 3;
+  }
+}
+
+.myCourseRoot {
+  @include media-breakpoint-up(lg) {
+    order: 2;
+  }
+}

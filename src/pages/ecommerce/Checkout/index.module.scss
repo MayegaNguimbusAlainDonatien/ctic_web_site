@@ -1,0 +1,153 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+//.checkout-title {
+//  font-size: @font-size-lg;
+//  font-weight: @font-weight-bold;
+//  color: @text-color;
+//  margin-bottom: 24px;
+//}
+
+.checkoutCardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+}
+
+.paymentInfoItem {
+  margin-bottom: 20px;
+}
+
+.payRadioMod {
+  font-weight: $font-weight-medium;
+}
+
+.payModeContent {
+  color: $text-color-secondary;
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  & .formField {
+    margin-bottom: 10px;
+  }
+}
+
+.payModeFormField {
+  margin-left: -6px;
+  margin-right: -6px;
+
+  & .formField {
+    margin-bottom: 10px;
+    width: 50%;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+.deliveryAddressCell {
+  padding: 18px 20px 10px;
+  margin-bottom: 16px;
+  border: 1px solid $border-color;
+  border-radius: $card-radius;
+}
+
+.deliveryAddressRow {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  padding-right: 45px;
+  margin-bottom: 5px;
+
+  [dir='rtl'] & {
+    padding-right: 0;
+    padding-left: 45px;
+  }
+
+  & p {
+    margin-left: 40px;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 40px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-left: 0;
+
+      [dir='rtl'] & {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.deliveryRadio {
+  position: relative;
+
+  & input {
+    margin-right: 8px;
+    margin-left: 8px !important;
+
+    @include media-breakpoint-up(md) {
+      margin-right: 24px;
+
+      [dir='rtl'] & {
+        margin-right: 8px;
+        margin-left: 24px;
+      }
+    }
+  }
+  label {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+
+.deliveryEditBtn {
+  background-color: transparent;
+  color: $text-color;
+  box-shadow: none;
+  border: 0 none;
+  border-radius: $border-radius-circle;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  [dir='rtl'] & {
+    right: auto;
+    left: 0;
+  }
+}
+
+.deliveryAddressItem {
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  margin-left: 40px;
+  margin-bottom: 16px;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 40px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-left: 56px;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 56px;
+    }
+  }
+
+  & .btn {
+    height: 36px;
+  }
+}
+
+.link {
+  color: $white;
+  text-decoration: none;
+}

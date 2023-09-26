@@ -1,0 +1,49 @@
+@import '../../../../shared/styles/variable';
+
+.hcNotificationCell {
+  padding: 12px 20px;
+
+  & .dot {
+    height: 10px;
+    width: 10px;
+    min-width: 10px;
+    margin-top: 6px;
+    margin-right: 12px;
+    border-radius: $border-radius-circle;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-right: 16px;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.hcNotificationContent {
+  font-size: $font-size-base;
+  color: $text-color-secondary;
+
+  & h5 {
+    font-weight: $font-weight-medium;
+    margin-bottom: 2px;
+    color: $text-color;
+    font-size: $font-size-base;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.hcNotificationScrollbar {
+  height: 288px;
+}
+

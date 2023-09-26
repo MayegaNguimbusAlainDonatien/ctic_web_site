@@ -1,0 +1,30 @@
+@import '../../../../shared/styles/variable';
+
+.visitorAnalysisAction {
+  color: $text-color-secondary;
+
+  & .dot {
+    margin-right: 16px;
+    background-color: $secondary;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.visitorAnalysisActionContent {
+  flex: 1;
+}
+
+.percent {
+  font-size: 30px;
+  font-weight: $font-weight-medium;
+  color: $secondary;
+}

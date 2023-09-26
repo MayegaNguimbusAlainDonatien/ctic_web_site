@@ -1,0 +1,30 @@
+@import '../../../../shared/styles/variable';
+
+.cancelVisitsNumber {
+  margin-right: 8px;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.cancelArrowIcon {
+  & img {
+    height: 12px;
+  }
+}
+
+.cancelVisitsGraph {
+  margin: 0 -20px -20px;
+}
+
+.cancelVisitsGraphColor {
+  stop-color: $secondary;
+}
+
+.cancelVisitsStrokeColor {
+  stroke: $secondary;
+}

@@ -1,0 +1,26 @@
+@import '../../../../shared/styles/variable';
+
+.patientsNumber {
+  margin-right: 8px;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.patientsArrowIcon {
+  & img {
+    height: 12px;
+  }
+}
+
+.patientsGraph {
+  margin: 0 -20px -20px;
+}
+
+.patientsGraphColor {
+  stop-color: $primary;
+}

@@ -1,0 +1,87 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.productSidebar {
+  padding: 24px;
+}
+
+.productSidebarTitle {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+}
+
+.productSidebarItem {
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.productSidebarItemTitle {
+  font-size: $font-size-base;
+  color: $text-color-secondary;
+  margin-bottom: 16px;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+}
+
+.productSidebarCheckedCell {
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.productSidebarColorCell {
+  width: 40px;
+  height: 40px;
+  border-radius: $border-radius-circle;
+  cursor: pointer;
+}
+
+.productSidebarColorCellBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: $border-radius-circle;
+  color: $white;
+  border: 0 none;
+  box-shadow: none;
+  font-size: 20px;
+  background-color: transparent;
+  padding: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  & .anticon svg {
+    display: block;
+  }
+}
+
+.productSidebarTree {
+  flex-grow: 1;
+  max-width: 400px;
+  font-weight: $font-weight-normal;
+}
+
+.productSidebarRatingCell {
+  cursor: pointer;
+  color: $text-color-secondary;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.checkBoxLabel {
+  margin-left: 16px;
+
+  [dir='rtl'] & {
+    margin-right: 16px;
+    margin-left: 0;
+  }
+}

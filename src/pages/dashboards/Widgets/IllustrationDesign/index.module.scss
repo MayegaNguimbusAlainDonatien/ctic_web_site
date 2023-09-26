@@ -1,0 +1,75 @@
+@import '../../../../shared/styles/variable';
+
+.appCardBody {
+  margin: -20px;
+}
+
+.illustrationImgHeader {
+  flex: 1;
+}
+
+.illustrationBadge {
+  background-color: $primary;
+  color: $white;
+  left: 16px;
+  bottom: 16px;
+  font-weight: $font-weight-light;
+  text-transform: capitalize;
+  font-size: $font-size-lg;
+  padding: 4px 12px;
+  border-radius: 30px;
+
+  [dir='rtl'] & {
+    left: auto;
+    right: 16px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    font-size: 18px;
+  }
+  @include media-breakpoint-up(xxl) {
+    left: 24px;
+    bottom: 24px;
+
+    [dir='rtl'] & {
+      left: auto;
+      right: 24px;
+    }
+  }
+}
+
+.illustrationContent {
+  padding: 20px;
+  @include media-breakpoint-up(xxl) {
+    padding: 24px;
+  }
+
+  & h4 {
+    margin-bottom: 16px;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.illustrationAction {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  color: $text-color-secondary;
+}
+
+.illustrationActionItem {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.illMiddleIcon {
+  font-size: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}

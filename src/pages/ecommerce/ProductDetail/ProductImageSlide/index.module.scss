@@ -1,0 +1,46 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.productFavorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  font-size: 20px;
+  cursor: pointer;
+
+  [dir='rtl'] & {
+    right: auto;
+    left: 10px;
+  }
+}
+
+.productImageSlideAction {
+  @include media-breakpoint-up(md) {
+    padding-left: 20px;
+
+    [dir='rtl'] & {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 60px;
+
+    [dir='rtl'] & {
+      padding-left: 0;
+      padding-right: 60px;
+    }
+  }
+}
+
+.addToCartBtn {
+  width: 140px;
+  margin-right: 20px;
+
+  [dir='rtl'] & {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+}

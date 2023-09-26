@@ -1,0 +1,37 @@
+@import '../../../../shared/styles/variable';
+
+.acaNotificationItem {
+  padding: 8px 20px;
+  align-items: center;
+  border: 0 none !important;
+}
+
+.acaNotificationThumb {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: $border-radius;
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+}
+
+.acaNotificatioContent {
+  width: calc(100% - 66px);
+
+  & h3 {
+    display: inline-block;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-base;
+    margin-bottom: 2px;
+  }
+
+  & p {
+    font-size: $font-size-base;
+    color: $text-color-secondary;
+    margin-bottom: 4px;
+  }
+}

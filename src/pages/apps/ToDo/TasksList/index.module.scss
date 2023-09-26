@@ -1,0 +1,435 @@
+@import '../../../../shared/styles/variable';
+
+.todoListDesktop {
+  display: none;
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}
+
+.todoListMobile {
+  display: block;
+
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}
+
+.todoListItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $text-color-secondary;
+  padding: 9.5px 24px;
+  border-bottom: solid $border-width $border-color;
+
+  &.checked {
+    background-color: rgba($primary, 0.1);
+    font-weight: $font-weight-light;
+  }
+
+  &:hover {
+    & .todoListItemAction {
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      width: 82px;
+    }
+
+    & .todoListItemLabelGroup {
+      transform: translateX(-70px);
+      opacity: 0;
+      visibility: hidden;
+
+      [dir=rtl] & {
+        transform: translateX(70px);
+      }
+    }
+
+    & .todoListItemRightContent {
+      transform: translateX(-65px);
+
+      [dir=rtl] & {
+        transform: translateX(65px);
+      }
+    }
+  }
+}
+
+.todoDots {
+  height: 12px;
+  width: 12px;
+  border-radius: $border-radius-circle;
+  display: block;
+}
+
+.todoListItemLeft {
+  display: flex;
+  align-items: center;
+  width: 90%;
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
+}
+
+.todoListCheckboxView {
+  margin-right: 12px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.todoListTitle {
+  margin-right: 12px;
+  position: relative;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.todoListItemHide {
+  display: inline-block;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.todoListItemRight {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+    justify-content: flex-end;
+    padding-left: 12px;
+
+    [dir=rtl] & {
+      padding-left: 0;
+      padding-right: 12px;
+    }
+  }
+}
+
+.todoListItemRightContent {
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+  transform: translateX(0);
+  overflow: hidden;
+}
+
+.todoListImgView {
+  display: flex;
+  align-items: center;
+}
+
+.todoListScheduleDate {
+  margin-left: 6px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 6px;
+  }
+}
+
+.todoListStarView {
+  margin-right: 12px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.todoListImg {
+  margin-right: 14px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+
+  & img {
+    min-width: 36px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+  }
+}
+
+.todoContentHeader {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+
+.todoContentHeaderCheckboxView {
+  margin-right: 4px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 4px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 8px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+  }
+}
+
+.todoSelectTaskDropdownView {
+  margin-right: 8px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 0;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+}
+
+.todoSelectTaskDropdown {
+  cursor: pointer;
+  border: 0 none;
+  max-width: 80px;
+
+  & option {
+    padding: 8px;
+    cursor: pointer;
+  }
+}
+
+.todoHeaderCheckedActionView {
+  display: flex;
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+}
+
+.todoHeaderCheckedAction {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  color: $text-color-disabled;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 22px;
+    background-color: $border-color;
+    transform: translateY(-50%);
+
+    [dir=rtl] & {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  [dir=rtl] & {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-right: 8px;
+    padding-left: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 8px;
+      padding-left: 0;
+      padding-right: 16px;
+    }
+  }
+}
+
+.todoContentHeaderPagination {
+  padding-left: 8px;
+  padding-right: 8px;
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.todoFooter {
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.todoSearch {
+  position: relative;
+  max-width: 165px;
+  display: none;
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
+  }
+
+  & input {
+    padding: 8px 14px;
+    height: 36px;
+  }
+
+  & button {
+    height: 36px;
+    width: 36px;
+    box-shadow: none;
+  }
+}
+
+.todoViewSelect {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.appIconBtn {
+  &.active {
+    color: $text-color;
+    background-color: lighten($body-bg, 0.2);
+    border-color: darken($body-bg, 1);
+    box-shadow: none;
+  }
+}
+
+.todoListItemAction {
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  overflow: hidden;
+  width: 0;
+
+  [dir=rtl] & {
+    right: auto;
+    left: -20px;
+  }
+
+  & :global(.btn) {
+    margin: 0 2px;
+  }
+}
+
+.todoListItemLabelGroup {
+  position: relative;
+  margin-right: 14px;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+  transform: translateX(0);
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.todoListItemLabelGroupItem {
+  font-size: 20px;
+
+  & svg {
+    display: block;
+  }
+
+  &:not(:first-child) {
+    margin-left: 14px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 14px;
+    }
+  }
+}
+
+.badgePriority {
+  font-size: $font-size-sm;
+  padding: 2px 12px 3px;
+  border-radius: $border-radius-30;
+}
+
+.dropdownToggleBtn {
+  color: inherit;
+  text-align: left;
+  font-size: $font-size-base;
+
+  [dir=rtl] & {
+    text-align: right;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+.labelItems {
+  font-size: $font-size-base;
+}
+
+.searchInput {
+  [dir='rtl'] & {
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+  }
+}
+.searchBtn {
+  [dir='rtl'] & {
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

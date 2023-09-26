@@ -1,0 +1,68 @@
+@import '../../../../shared/styles/variable';
+
+.addTagsContent {
+  background-color: darken($body-bg, 6.8);
+  border-radius: $card-radius;
+}
+
+.tagBadge {
+  font-size: $font-size-base;
+  margin: 8px;
+  padding: 5px 12px;
+  color: $white;
+  border-radius: 30px;
+}
+
+.tagBadgeBtn {
+  background-color: rgba($black, 0.26);
+  color: $white;
+  border: 0 none;
+  padding: 2px 0 0;
+  box-shadow: none;
+  border-radius: $border-radius-circle;
+  width: 22px;
+  height: 22px;
+  font-size: $font-size-sm;
+  margin-left: 12px;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: fade($black, 26);
+    color: $white;
+  }
+}
+
+.addNewTagLink {
+  cursor: pointer;
+  margin: 8px 8px 8px 12px;
+  color: $secondary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+
+  [dir='rtl'] & {
+    margin: 8px 12px 8px 8px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 18px;
+  }
+}
+
+.tagCheck,
+.tagClose {
+  margin-left: 12px;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+}

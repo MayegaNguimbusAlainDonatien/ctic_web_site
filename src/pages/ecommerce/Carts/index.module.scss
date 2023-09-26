@@ -1,0 +1,50 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+.cartsFooter {
+  margin-top: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cartIncDec {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  width: 100px;
+  height: 40px;
+
+  & span {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.cartUserInfo {
+  margin-left: 12px;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
+  & h3 {
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    margin-bottom: 0;
+  }
+
+  & p {
+    color: $text-color-secondary;
+    margin-bottom: 0;
+  }
+}
+
+.Avatar {
+  width: 45;
+  height: 45px;
+  border-radius: $border-radius-circle;
+}
+
+.heading {
+  width: 85%;
+}

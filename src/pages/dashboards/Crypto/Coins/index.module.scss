@@ -1,0 +1,27 @@
+@import '../../../../shared/styles/variable';
+
+.imgCoins {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-left: 16px ;
+    margin-right: 0;
+  }
+}
+
+.coinsPrice {
+  font-size: 17px;
+  font-weight: $font-weight-medium;
+}
+
+.coinsIncrement{
+    margin-left: 12px;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+}

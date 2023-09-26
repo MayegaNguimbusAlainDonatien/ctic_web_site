@@ -1,0 +1,560 @@
+@import '../../../../shared/styles/variable';
+
+.todoDetailHeaderStarIcon {
+  margin-left: auto;
+  display: none;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}
+
+.todoDetailHeaderDeleteIcon {
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 20px;
+  color: $text-color-disabled;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-left: 10px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+}
+
+.todoDetailStatusBtn {
+  margin-left: 8px;
+  padding: 7px 16px;
+  color: $primary;
+  font-weight: $font-weight-light;
+  font-size: $font-size-sm;
+  border: solid $border-width $primary;
+  cursor: pointer;
+  border-radius: $border-radius;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-left: 16px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 16px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-base;
+  }
+
+  &.bgColor {
+    background-color: $primary;
+    color: $white;
+    font-weight: $font-weight-medium;
+  }
+
+  & .checkIcon {
+    margin-right: 4px;
+    font-size: 18px;
+    vertical-align: middle;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 4px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-right: 8px;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.todoAssignedStaff {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+}
+
+.todoAvatar36 {
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
+
+  &.todoAvatarName {
+    font-size: $font-size-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.todoAvatar30 {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+
+  &.todoAvatarName {
+    font-size: $font-size-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.todoAssignedStaffInfo {
+  margin-left: 14px;
+  font-size: $font-size-base - 1;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+
+  & p {
+    margin-bottom: 2px;
+  }
+
+  & .todoAssignedStaffTitle {
+    margin-bottom: 0;
+    font-weight: $font-weight-medium;
+    color: $primary;
+  }
+}
+
+.todoChStaffAvatar {
+  margin-right: 12px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.todoComment {
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.todoCommentTitle {
+  font-size: $font-size-base;
+  margin-bottom: 16px;
+  font-weight: $font-weight-medium;
+  border-bottom: solid $border-width $border-color;
+  padding-bottom: 10px;
+}
+
+.todoCommentBody {
+  flex: 1;
+}
+
+.todoCommentScroll {
+  max-height: 164px;
+
+  @include media-breakpoint-up(xxl) {
+    max-height: 250px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    max-height: 292px;
+  }
+
+  @media screen and (min-width: 2000px) {
+    max-height: 392px;
+  }
+
+  @media screen and (min-width: 2400px) {
+    max-height: 100%;
+  }
+}
+
+.todoCommentArea {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.todoCommentItem {
+  margin-top: 6px;
+  display: flex;
+  position: relative;
+
+  &.hideUserInfo {
+    position: relative;
+    margin-top: 4px;
+
+    & .todoCommentTime, & .todoCommentUser {
+      display: none;
+    }
+
+    & .todoCommentView {
+      margin-left: 46px;
+    }
+  }
+
+  &.lastChatMessage {
+    & .todoCommentMsg {
+
+      border-bottom-left-radius: $card-radius;
+    }
+  }
+}
+
+.todoCommentView {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.todoCommentUser {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 22px;
+  position: relative;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  & .todoName {
+    color: $primary;
+    font-weight: $font-weight-medium;
+    position: absolute;
+    left: 0;
+    bottom: -23px;
+    z-index: 1;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    background-color: $body-bg;
+  }
+
+  &:hover .todoName {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.todoCommentMsgView {
+  display: flex;
+  flex-direction: column;
+}
+
+.todoCommentMsg {
+  display: flex;
+  border-top-right-radius: $card-radius;
+  border-bottom-right-radius: $card-radius;
+  padding: 8px 12px;
+  position: relative;
+  background-color: $body-bg;
+  border: solid $border-width $border-color;
+  font-size: $font-size-base;
+
+  [dir=rtl] & {
+    border-bottom-left-radius: $card-radius;
+    border-bottom-right-radius: 0;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.todoCommentTime {
+  font-size: $font-size-sm;
+  margin-bottom: 6px;
+  color: $text-color-secondary;
+  display: block;
+}
+
+.todoDetailDatepicker {
+  margin-left: 0;
+
+  [dir=rtl] & {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-left: 20px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+}
+
+.todoDetailStaff {
+  margin-bottom: 12px;
+  height: 36px;
+  min-width: 200px;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 0;
+  }
+}
+
+.todoDetailContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.todoDetailContentHeader {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  & h2 {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 20px;
+    }
+  }
+}
+
+.todoDetailContentHeaderLabel {
+  margin-bottom: 10px;
+}
+
+.todoDetailContentHeaderTag {
+  margin-right: 4px;
+  margin-bottom: 10px;
+}
+
+.todoDetailContentHeaderTagBtn {
+  padding: 4px 12px;
+  font-size: $font-size-base;
+  border-radius: $border-radius-30;
+  display: inline-block;
+}
+
+.todoDetailContentHeaderLeft {
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    margin-right: auto;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}
+
+.todoDetailStaffRow {
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.todoDetailStaffEdit {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.todoDetailStaffEditBtnView {
+  margin-left: auto;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.todoDetailDivider {
+  border-bottom: solid $border-width $border-color;
+  margin-bottom: 20px;
+}
+
+.todoDetailPara {
+  font-size: $font-size-base;
+  margin-bottom: 0;
+}
+
+.todoDetailStatusPri {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.todoDetailStatus {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  min-width: 105px;
+}
+
+.todoDetailTextareaForm {
+  margin-bottom: 0;
+
+  & textarea {
+    height: 150px;
+  }
+}
+
+.todoDetailFooter {
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+
+  & textarea {
+    padding: 8px 14px;
+    height: 40px;
+    border-radius: $border-radius-lg;
+    font-size: $font-size-base;
+  }
+}
+
+.todoDetailBtn {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: $border-radius-lg;
+  font-size: 20px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+}
+
+.todoTaskCrByInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todoTaskCrByInfoContent {
+  margin-left: 14px;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-base - 1;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & .todoCrOn {
+    color: $text-color-secondary;
+    margin-left: 8px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}
+
+.todoCrByName {
+  margin-right: 8px;
+  font-weight: $font-weight-medium;
+  display: inline-block;
+  color: $primary;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.todoDetailSelectBox {
+  width: 100%;
+  cursor: pointer;
+  font-size: $font-size-base;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.todoDetailSelectOption {
+  cursor: pointer;
+  padding: 5px 12px;
+  font-size: $font-size-base;
+}
+
+.todoDetailArrow {
+  margin-left: -10px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: -10px;
+  }
+}

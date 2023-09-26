@@ -1,0 +1,47 @@
+@import '../../../../shared/styles/variable';
+
+.widProfileInfo {
+  flex: 1;
+
+  & h3 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+  }
+}
+
+.widProfileAvatar {
+  width: 100px;
+  height: 100px;
+
+  @include media-breakpoint-up(md) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.widProfileAction {
+  color: $text-color-secondary;
+}
+
+.widProfileActionItem {
+  padding-left: 8px;
+  padding-right: 8px;
+  overflow: hidden;
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  & h2 {
+    margin-bottom: 8px;
+    font-weight: $font-weight-medium;
+    font-size: 20px;
+  }
+
+  & p {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}

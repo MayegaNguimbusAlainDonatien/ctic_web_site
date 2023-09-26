@@ -1,0 +1,42 @@
+@import '../../../../shared/styles/variable';
+
+.profileTitle {
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: $font-size-base;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 16px;
+    margin-top: 8px;
+  }
+}
+
+.profileActionItemContent {
+  padding: 20px 8px;
+  width: 50%;
+  color: $text-color-secondary;
+
+  & h5 {
+    color: $text-color;
+    font-size: $font-size-base;
+    margin-bottom: 0;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.profileRightBorder {
+  border-right: solid $border-width darken($border-color, 0.2);
+
+  [dir=rtl] & {
+    border-right: 0 none;
+    border-left: solid $border-width darken($border-color, 0.2);
+  }
+}
+
+.profileTopBorder {
+  border-top: solid $border-width darken($border-color, 0.2);
+}
+

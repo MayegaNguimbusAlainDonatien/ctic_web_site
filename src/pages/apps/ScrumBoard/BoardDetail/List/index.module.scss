@@ -1,0 +1,80 @@
+@import '../../../../../shared/styles/variable';
+@import '../../../../../shared/styles/mixin';
+
+.listHeaderCard {
+  position: relative;
+  margin-bottom: 8px;
+
+  & :global(.card-body) {
+    padding: 10px 24px;
+  }
+}
+
+.scrumBoardAddBtnCard {
+  margin-top: 8px;
+  min-height: 64px;
+  cursor: pointer;
+
+  & :global(.card-body) {
+    padding: 14px 20px;
+  }
+}
+
+.scrumBoardAddBtnCardUserAvatar {
+  background-color: $gray-100;
+  border: solid $border-width $border-color;
+  border-radius: $border-radius-circle;
+  width: 36px;
+  height: 36px;
+}
+
+.scrumBoardAddBtnCardUserAddIcon {
+  color: $text-color-disabled;
+  font-weight: $font-weight-light;
+  font-size: 20px;
+  display: block;
+}
+
+.scrumBoardAddBtnCardUserText {
+  margin-left: 12px;
+  font-weight: $font-weight-normal;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+}
+
+.scrumBoardListHeaderFlex {
+  & h5 {
+    font-size: 15px;
+    font-weight: $font-weight-medium;
+    margin-bottom: 0;
+  }
+}
+
+.scrumBoardListHeaderFlexAuto {
+  margin-left: auto;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  & :global(.btn) {
+    margin: 0 2px;
+  }
+}
+
+.scrumBoardListHeaderInput {
+  margin-right: 12px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  & :global(.form-control) {
+    font-size: $font-size-base;
+  }
+}

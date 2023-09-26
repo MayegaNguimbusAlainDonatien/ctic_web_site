@@ -1,0 +1,48 @@
+@import '../../../../shared/styles/variable';
+
+.drCard {
+  color: $white;
+}
+
+.drThumb {
+  align-self: center;
+  margin-right: 12px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.drCardContent {
+  width: calc(100% - 45px);
+}
+
+.drCardContentMain {
+
+  & h5 {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    color: $white;
+    margin-bottom: 2px;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.drTime {
+  border-radius: $border-radius-circle;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  font-weight: $font-weight-medium;
+  color: $text-color-secondary;
+  background-color: $body-bg;
+
+  @media screen and (max-width: 1600px) and (min-width: 1200px) {
+    display: none !important;
+  }
+}
+

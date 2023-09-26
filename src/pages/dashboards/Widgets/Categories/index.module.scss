@@ -1,0 +1,23 @@
+@import '../../../../shared/styles/variable';
+
+.categoriesScrollbar {
+  height: 212px;
+
+  @media screen and (min-width: 1600px) {
+    height: 322px;
+  }
+}
+
+.checkBox {
+  margin-right: 8px;
+
+  [dir='rtl'] & {
+    margin-left: 8px;
+    margin-right: 0;
+  }
+}
+
+.categoryItem {
+  padding: 8px 20px;
+  border-bottom: 0 none !important;
+}

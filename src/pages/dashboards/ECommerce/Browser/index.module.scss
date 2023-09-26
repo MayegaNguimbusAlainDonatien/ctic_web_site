@@ -1,0 +1,32 @@
+@import '../../../../shared/styles/variable';
+
+.browserCell {
+  padding: 8px 20px;
+  border-bottom: 0 none !important;
+}
+
+.browserThumb {
+  margin-right: 14px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.browserContent {
+  font-size: $font-size-base;
+  color: $text-color-secondary;
+
+  & h3 {
+    font-weight: $font-weight-medium;
+    margin-bottom: 2px;
+    font-size: $font-size-base;
+    color: $text-color;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+

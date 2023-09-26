@@ -1,0 +1,76 @@
+@import '../../../../shared/styles/variable';
+
+.generalStatsContent {
+  width: calc(100% - 50px);
+  color: $text-color;
+
+  & p {
+    margin-bottom: 0;
+    color: $text-color-secondary;
+  }
+
+  & h3 {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+  @include media-breakpoint-up(lg) {
+    width: calc(100% - 70px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: calc(100% - 50px);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: calc(100% - 90px);
+  }
+}
+
+.generalStatsBadge {
+  border-radius: 30px;
+  display: inline-block;
+  color: $white;
+  padding: 4px 12px;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  min-width: 80px;
+  text-align: center;
+
+  @media only screen and (max-width: 1580px) and (min-width: 991px)  {
+    display: none;
+  }
+}
+
+
+.generalStatsAvatar {
+  min-width: 46px;
+  height: 46px;
+  width: 46px;
+  padding: 10px;
+  margin-right: 16px;
+  font-size: 18px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+
+  & svg {
+    display: block;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-width: 54px;
+    height: 54px;
+    width: 54px;
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    min-width: 60px;
+    height: 60px;
+    width: 60px;
+    font-size: 24px;
+  }
+
+}

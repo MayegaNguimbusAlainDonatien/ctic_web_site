@@ -1,0 +1,22 @@
+@import '../../../../shared/styles/variable';
+
+.dealsTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  margin-right: 12px;
+  margin-bottom: 0;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-right: 32px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 32px;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+.userFlatListItem {
+  margin-bottom: 24px;
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 32px;
+  }
+}
+
+.userFlatListItemInner {
+  &:hover {
+    & .userFlatListItemContent:before {
+      left: -150px;
+
+      [dir='rtl'] & {
+        left: auto;
+        right: -150px;
+      }
+    }
+  }
+}
+
+.userFlatListItemContent {
+  padding-bottom: 20px;
+  border-bottom: 2px solid $gray-400;
+  flex: 1 1;
+
+  @include media-breakpoint-up(xxl) {
+    padding-bottom: 32px;
+  }
+
+  &:before {
+    @include media-breakpoint-up(sm) {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      z-index: 1;
+      height: 2px;
+      width: 162px;
+      background-color: $gray-400;
+      transition: all 0.5s ease;
+
+      [dir='rtl'] & {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+  & h3 {
+    font-size: $font-size-lg;
+    margin-bottom: 12px;
+    color: $text-color;
+    font-weight: $font-weight-bold;
+
+    & > span {
+      margin-right: 4px;
+
+      [dir='rtl'] & {
+        margin-right: 0;
+        margin-left: 4px;
+      }
+    }
+
+    & .userDes {
+      color: $primary;
+    }
+  }
+}
+
+.userFlatListItemThumb {
+  margin-bottom: 16px;
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 20px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+
+  & img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+    @include media-breakpoint-up(sm) {
+      width: 130px;
+      height: 130px;
+    }
+  }
+}
+
+.userFlatListItemPara {
+  color: $text-color-secondary;
+  font-size: $font-size-base;
+
+  @include media-breakpoint-up(lg) {
+    padding-right: 24px;
+
+    [dir='rtl'] & {
+      padding-right: 0;
+      padding-left: 24px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-right: 64px;
+
+    [dir='rtl'] & {
+      padding-right: 0;
+      padding-left: 64px;
+    }
+  }
+}
+
+.userFlatSocialInfo {
+  color: $gray-600;
+  margin-left: -12px;
+  margin-right: -12px;
+  font-size: $font-size-base;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.userFlatSocialInfoItem {
+  padding-left: 12px;
+  padding-right: 12px;
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  & span {
+    margin-right: 4px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 4px;
+    }
+  }
+
+  & .anticon {
+    font-size: 20px;
+  }
+}
+
+.userFlatSocialInfoItemText {
+  @include media-breakpoint-up(xs) {
+    display: none;
+  }
+}

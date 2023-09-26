@@ -1,0 +1,30 @@
+.baniar {
+    height : 22rem;
+    padding: 0px;
+}
+
+.componentDisplay {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: space-around;
+    text-align     : center;
+    margin         : 2.5rem;
+    padding        : 15px;
+}
+
+.TitleText {
+    text-transform: uppercase;
+    margin-top    : 0.6rem;
+    margin-bottom : 0.6rem;
+    color         : #F78CA2;
+}
+
+.componentImg {
+    margin       : auto;
+    width        : 4rem;
+    height       : 4rem;
+    border-radius: 100%;
+    border       : 5px solid #C70039;
+    overflow     : hidden;
+}

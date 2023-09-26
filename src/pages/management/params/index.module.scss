@@ -1,0 +1,103 @@
+@import '../../../shared/styles/variable';
+
+.packageOneRow {
+    max-width: 1000px;
+
+    & :global(.row) {
+        justify-content: center;
+    }
+}
+
+.headTitle {
+    display       : block;
+    text-align    : left;
+    width         : 100%;
+    color         : #666;
+    font-weight   : 500;
+    white-space   : nowrap;
+    text-transform: capitalize;
+}
+
+.subTitle {
+    display       : block;
+    text-align    : left;
+    width         : 100%;
+    font-size     : 11.4px;
+    color         : #aaa;
+    font-weight   : 400;
+    white-space   : nowrap;
+    text-transform: lowercase;
+}
+
+.subSecondTitle {
+    display       : block;
+    text-align    : left;
+    width         : 100%;
+    font-size     : 11.4px;
+    color         : orange;
+    font-weight   : 400;
+    white-space   : nowrap;
+    text-transform: uppercase;
+}
+
+.subEndTitle {
+    display       : block;
+    text-align    : left;
+    width         : 100%;
+    font-size     : 11.4px;
+    color         : red;
+    font-weight   : 400;
+    white-space   : nowrap;
+    text-transform: uppercase;
+}
+
+.rangeBtn {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : nowrap;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.btnInfos {
+    padding              : 7px;
+    color                : $text-color;
+    border-radius        : 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius   : 100%;
+    -ms-border-radius    : 100%;
+    -o-border-radius     : 100%;
+    border-color         : transparent;
+    background-color     : $component-bg;
+
+    &:hover,
+    &:focus {
+        border-color    : transparent;
+        color           : $text-color;
+        background-color: #eee;
+        rotate          : -7deg;
+    }
+}
+
+.btnSearch {
+    width                : 100%;
+    height               : 100%;
+    border-color         : transparent;
+    background-color     : $component-bg;
+
+    &:hover,
+    &:focus {
+        border-color    : transparent;
+        background-color: transparent;
+    }
+}
+
+.tableDesign {
+    font-size: 13px;
+    overflow : auto;
+}
+
+.cardModalScrollbar {
+    height: 65vh;
+    width : 100%;
+}

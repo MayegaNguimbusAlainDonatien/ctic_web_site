@@ -1,0 +1,28 @@
+@import '../../../../shared/styles/variable';
+
+.CategoriesDot {
+  height: 16px;
+  width: 16px;
+  border-radius: $border-radius-circle;
+  margin-right: 12px;
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  @include media-breakpoint-up(xs) {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.footerPadding {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.EarningGraph {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}

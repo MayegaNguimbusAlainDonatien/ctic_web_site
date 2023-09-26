@@ -1,0 +1,17 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.similarProductSlideView {
+  position: relative;
+  background-color: $gray-200;
+  padding-bottom: 25px;
+  margin-top: 20px;
+
+  & :global(.slick-prev), & :global(.slick-next)  {
+    display: none !important;
+  }
+
+  & :global(.slick-slide) {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,61 @@
+.slick-list,
+.slick-track,
+.slick-slide > div {
+  height: 100%;
+}
+
+.slick-dots {
+  bottom: 30px;
+}
+
+.slick-dots li {
+  margin-left: 6px;
+  margin-right: 6px;
+  width: auto;
+  height: auto;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+}
+
+.slick-dots li button:before {
+  color: transparent;
+  border: solid 2px white;
+  opacity: 1;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: #026ead;
+  border-color: #026ead;
+  color: #026ead;
+  font-size: 0;
+}
+
+.slick-prev {
+  top: 32px;
+  left: 36px;
+  z-index: 3;
+}
+
+.slick-next {
+  top: 32px;
+  right: 36px;
+  z-index: 3;
+}
+
+@media screen and (min-width: 1600px) {
+  .slick-dots li button {
+    width: 14px;
+    height: 14px;
+  }
+
+  .slick-dots li button:before {
+    width: 14px;
+    height: 14px;
+  }
+}

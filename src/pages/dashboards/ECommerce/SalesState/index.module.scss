@@ -1,0 +1,49 @@
+@import '../../../../shared/styles/variable';
+
+.stateCard {
+  color: $white;
+}
+
+.stateThumb {
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+
+  & img {
+    width: auto;
+
+    @include media-breakpoint-up(xl) {
+      width: 50px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: auto;
+    }
+  }
+}
+
+.stateContent {
+  position: relative;
+  width: calc(100% - 45px);
+
+  @include media-breakpoint-up(xl) {
+    width: calc(100% - 62px);
+  }
+  @include media-breakpoint-up(xxl) {
+    width: calc(100% - 70px);
+  }
+
+  & h3 {
+    font-size: 19px;
+    font-weight: $font-weight-bold;
+    color: $white;
+    margin-bottom: 2px;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../../../shared/styles/variable';
+
+.reportContent {
+  padding-right: 12px;
+  color: $text-color;
+
+  [dir='rtl'] & {
+    padding-right: 0;
+    padding-left: 12px;
+  }
+
+  & h3 {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+}
+
+.reChartContainer {
+  min-width: 150px;
+  max-width: 160px;
+}
+
+.reChartAction {
+  font-weight: $font-weight-bold;
+}

@@ -1,0 +1,95 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+// .scrum-board-wrap {
+//   padding-top: 16px;
+//   display: flex;
+//   flex-direction: column;
+//   flex: 1;
+// }
+
+.scrumBoardHeader {
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+
+  & h2 {
+    color: $text-color;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-lg;
+    margin-bottom: 0;
+  }
+}
+
+.scrumBoardAddCard {
+  border-radius: $card-radius;
+  background-color: $component-bg;
+  height: 224px;
+  border: dashed 2px $gray-600;
+  cursor: pointer;
+  
+  & .cardBody {
+    flex: 1;
+  }
+}
+
+.scrumBoardAddCardIcon {
+  background-color: $gray-500;
+  color: $white;
+  border-radius: $border-radius-circle;
+  margin-bottom: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    font-size: 24px;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 40px;
+    }
+  }
+}
+
+.scrumBoardCardText {
+  margin-bottom: 0;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+}
+
+.scrumBoardCard {
+  border-radius: $card-radius;
+  background-color: $primary;
+  color: $white;
+  cursor: pointer;
+  height: 224px;
+
+  & .cardBody {
+    flex: 1;
+  }
+}
+
+.scrumBoardListIcon {
+  margin-bottom: 25px;
+  font-size: 20px;
+
+  & svg:not(:first-child) {
+    margin-left: 20px;
+
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+}
+
+.scrumAddBoardCardFooterBtn {
+  width: 94px;
+}

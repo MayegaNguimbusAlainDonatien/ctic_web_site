@@ -1,0 +1,37 @@
+@import '../../../../shared/styles/variable';
+
+.studentName {
+  width: max-content;
+
+  [dir='rtl'] & {
+    width: auto;
+  }
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 30px;
+  max-width: 115px;
+  color: #d69d5a;
+  background-color: #fef1e4;
+  font-weight: $font-weight-medium;
+}
+
+.studentAvatar {
+  margin-right: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.studentTitle {
+  h3 {
+    font-size: 13px;
+    font-weight: $font-weight-medium;
+    margin-bottom: 0;
+  }
+}

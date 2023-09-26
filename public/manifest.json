@@ -1,0 +1,25 @@
+{
+  "short_name": "CTIC",
+  "name": "CTIC - we are all immigrants, it is the place of birth that changes",
+  "icons": [
+    {
+      "src": "logo_ctic.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "logo_ctic.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo_ctic.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#F9DEC9",
+  "background_color": "#ffffff"
+}

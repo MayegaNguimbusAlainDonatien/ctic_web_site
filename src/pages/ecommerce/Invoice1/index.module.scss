@@ -1,0 +1,128 @@
+@import '../../../shared/styles/variable';
+
+.invoice {
+  flex: 1;
+}
+.invoiceContainer {
+  flex: 1;
+  max-width: 900px;
+}
+
+.invoiceFooterTitle {
+  margin-bottom: 22px;
+  color: $text-color-secondary;
+  text-align: center;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 16px;
+  }
+}
+
+.invoiceCard {
+  margin-bottom: 24px;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 32px;
+  }
+  @include media-breakpoint-up(xxl) {
+    padding-top: 32px;
+  }
+}
+
+.invoiceHeader {
+  padding: 24px;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 40px 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.invoiceLogo {
+  @include media-breakpoint-up(lg) {
+    margin-right: 40px;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 40px;
+    }
+  }
+
+  & img {
+    display: inline-block;
+    width: 100px;
+
+    @include media-breakpoint-down(sm) {
+      width: 60px;
+    }
+  }
+}
+
+.invoiceHeaderRow {
+  margin-left: -12px;
+  margin-right: -12px;
+  color: $text-color-secondary;
+  flex: 1;
+}
+
+.invoiceHeaderItem {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 0;
+    text-align: left;
+
+    [dir='rtl'] & {
+      text-align: right;
+    }
+  }
+
+  &:last-child {
+    @include media-breakpoint-up(sm) {
+      text-align: right;
+
+      [dir='rtl'] & {
+        text-align: left;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+
+      [dir='rtl'] & {
+        text-align: right;
+      }
+    }
+  }
+
+  & h3 {
+    font-size: $font-size-lg;
+    color: $gray-700;
+    margin-bottom: 4px;
+    font-weight: $font-weight-bold;
+  }
+
+  & p {
+    margin-bottom: 4px;
+  }
+}
+
+.invoiceTruncateView {
+  width: 160px;
+  @include media-breakpoint-up(sm) {
+    width: auto;
+  }
+
+  & span {
+    display: block;
+  }
+}
+

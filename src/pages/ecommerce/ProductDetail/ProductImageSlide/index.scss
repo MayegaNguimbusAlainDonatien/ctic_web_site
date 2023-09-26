@@ -1,0 +1,43 @@
+.BrainhubCarousel__container {
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.BrainhubCarousel__container[dir='rtl'] {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.BrainhubCarousel__container .BrainhubCarousel {
+  height: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .BrainhubCarousel__container {
+    margin-bottom: 20px;
+  }
+
+  .BrainhubCarousel__dots {
+    display: none;
+  }
+}
+
+.BrainhubCarousel__dots {
+  flex-direction: column;
+}
+
+.BrainhubCarousel__dots .BrainhubCarousel__thumbnail {
+  opacity: 1;
+  background-color: transparent;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.BrainhubCarousel__dots .BrainhubCarousel__thumbnail--selected {
+  border: solid 2px #6c757d;
+}
+
+.BrainhubCarousel__dots img {
+  height: 80px;
+}

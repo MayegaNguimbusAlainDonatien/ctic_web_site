@@ -1,0 +1,24 @@
+@import '../../../../shared/styles/variable';
+
+.newsImage {
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    width: 160px;
+    height: 80px;
+  }
+}
+
+.newsContainer {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.newsHeading {
+  margin-left: 8px;
+  
+  [dir='rtl'] & {
+    margin-right: 8px;
+    margin-left: 0;
+  }
+}

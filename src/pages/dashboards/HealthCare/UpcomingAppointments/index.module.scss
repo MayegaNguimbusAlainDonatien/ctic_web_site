@@ -1,0 +1,53 @@
+@import '../../../../shared/styles/variable';
+
+.appointmentCell {
+  padding: 8px 20px;
+}
+
+.appointmentCellAvatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-left: 16px ;
+    margin-right: 0;
+  }
+}
+
+.appointmentCellWrapper{
+  margin-left: auto;
+
+  [dir=rtl] & {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+.appointmentCellContent {
+  font-size: $font-size-base;
+  color: $text-color-secondary;
+
+  & h5 {
+    font-weight: $font-weight-medium;
+    margin-bottom: 2px;
+    color: $text-color;
+    font-size: $font-size-base;
+  }
+
+  & p {
+    color: $primary;
+    margin-bottom: 0;
+  }
+}
+
+.appointmentCellTime {
+  font-size: 13px;
+  color: $primary;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: $font-weight-bold;
+}
+
+.upComingAppointScrollbar {
+  height: 280px;
+}

@@ -1,0 +1,81 @@
+@import '../../../../shared/styles/variable';
+
+.tempHeaderColor {
+  padding: 20px 24px;
+  flex: 1;
+  background-color: $cyan-600;
+  color: $white;
+  margin: -20px -20px 0;
+}
+
+.tempHeader {
+  & h3 {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-lg;
+    color: $white;
+    margin-bottom: 0;
+  }
+}
+
+.tempHeaderAction {
+  margin-left: auto;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  & svg {
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+
+.tempHeaderContent {
+  flex: 1;
+
+  & h1 {
+    font-weight: $font-weight-medium;
+    font-size: 24px;
+    color: $white;
+    @include media-breakpoint-up(sm) {
+      font-size: 36px;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 64px;
+    }
+    @media screen and (min-width: 1600px) {
+      font-size: 96px;
+    }
+  }
+
+  & p {
+    display: flex;
+    align-items: center;
+
+    & img {
+      margin-right: 12px;
+
+      [dir='rtl'] & {
+        margin-right: 0;
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+.tempContent {
+  padding: 20px 24px;
+}
+
+.dayTempItem {
+  & p {
+    margin-bottom: 12px;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+  }
+
+  & span {
+    display: inline-block;
+  }
+}

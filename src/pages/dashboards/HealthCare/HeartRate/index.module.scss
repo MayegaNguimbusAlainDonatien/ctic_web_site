@@ -1,0 +1,44 @@
+@import '../../../../shared/styles/variable';
+
+.heartRate {
+
+  & h3 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $white;
+  }
+}
+
+.heartGraphView {
+  margin-bottom: -30px;
+}
+
+.heartGraphItem {
+  width: 75%;
+  @include media-breakpoint-up(xxl) {
+    width: 50%;
+  }
+}
+
+.unitTitle {
+  background-color: rgba($black, 0.04);
+  margin: 0 -20px -16px;
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  @include media-breakpoint-up(xxl) {
+    font-size: 24px;
+    padding: 8px 20px;
+  }
+
+  & span {
+    font-size: $font-size-lg;
+    margin-left: 8px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}
+

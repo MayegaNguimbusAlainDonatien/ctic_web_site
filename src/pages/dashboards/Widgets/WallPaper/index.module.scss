@@ -1,0 +1,129 @@
+@import '../../../../shared/styles/variable';
+
+.wallpaperCard {
+  background-image: url('../../../../assets/images/latestpost.png');
+  color: $white;
+  position: relative;
+  min-height: 320px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba($tooltip-bg, 0.35);
+    border-radius: inherit;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.wallpaperHeader {
+  margin-bottom: 16px;
+  padding-top: 10px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 24px;
+  }
+
+  & h3 {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-lg;
+    color: $white;
+    margin-bottom: 0;
+  }
+}
+
+.wallpaperHeaderAction {
+  margin-left: auto;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  & svg {
+    font-size: 20px;
+  }
+}
+
+.wallpaperContent {
+  padding-top: 40px;
+}
+
+.wallpaperAvatar {
+  margin-bottom: 24px;
+  width: 70px;
+  height: 70px;
+}
+
+.wallpaperTitle {
+  font-weight: $font-weight-medium;
+  color: $white;
+  font-size: 20px;
+  line-height: 1.25;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 24px;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 30px;
+  }
+}
+
+.wallpaperContentAction {
+  margin-left: auto;
+  margin-right: -12px;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-base;
+
+  [dir='rtl'] & {
+    margin-left: -12px;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    font-size: $font-size-lg;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 18px;
+  }
+}
+
+.wallpaperContentActionItem {
+  padding-left: 8px;
+  padding-right: 8px;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 12px;
+    padding-right: 12px;
+    flex-direction: row;
+  }
+}
+
+.middleIcon {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+
+  @include media-breakpoint-up(sm) {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+}

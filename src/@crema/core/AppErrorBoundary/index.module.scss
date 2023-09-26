@@ -1,0 +1,10 @@
+@import '../../../shared/styles/variable.scss';
+
+.errorBoundary {
+
+  & svg {
+    fill: $primary;
+    width: 100%;
+    max-width: 400px;
+  }
+}
